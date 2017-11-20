@@ -1,0 +1,108 @@
+INFO  : 13:46:19 Metrics server listening on 127.0.0.1:3000
+INFO  : 13:46:20 Proxy listening on 127.0.0.1:8080
+DEBUG : 2017/05/17 13:46:30 requester.go:114: makeRequest: 
+client: 13:46:30 GET http://127.0.0.1:3000
+DEBUG : 2017/05/17 13:46:30 metrics.go:66: - randInt: 3081
+DEBUG : 2017/05/17 13:46:31 decorator.go:107: backing off...
+client: 13:46:31 GET http://web02:3000
+DEBUG : 2017/05/17 13:46:31 metrics.go:66: - randInt: 2887
+DEBUG : 2017/05/17 13:46:32 decorator.go:107: backing off...
+client: 13:46:33 GET http://web03:3000
+DEBUG : 2017/05/17 13:46:33 metrics.go:66: - randInt: 1847
+DEBUG : 2017/05/17 13:46:34 decorator.go:107: backing off...
+INFO  : 13:46:36 FAILURE!
+DEBUG : 2017/05/17 13:46:36 requester.go:65: > 1 requests done.
+DEBUG : 2017/05/17 13:46:40 requester.go:114: makeRequest: 
+client: 13:46:40 GET http://web01:3000
+DEBUG : 2017/05/17 13:46:40 metrics.go:66: - randInt: 4059
+DEBUG : 2017/05/17 13:46:41 decorator.go:107: backing off...
+client: 13:46:41 GET http://web02:3000
+DEBUG : 2017/05/17 13:46:41 metrics.go:66: - randInt: 2081
+DEBUG : 2017/05/17 13:46:42 decorator.go:107: backing off...
+client: 13:46:43 GET http://web03:3000
+DEBUG : 2017/05/17 13:46:43 metrics.go:66: - randInt: 1318
+DEBUG : 2017/05/17 13:46:44 decorator.go:107: backing off...
+INFO  : 13:46:46 FAILURE!
+DEBUG : 2017/05/17 13:46:46 requester.go:65: > 2 requests done.
+DEBUG : 2017/05/17 13:46:50 requester.go:114: makeRequest: 
+client: 13:46:50 GET http://web01:3000
+DEBUG : 2017/05/17 13:46:50 metrics.go:66: - randInt: 4425
+DEBUG : 2017/05/17 13:46:51 decorator.go:107: backing off...
+client: 13:46:51 GET http://web02:3000
+DEBUG : 2017/05/17 13:46:51 metrics.go:66: - randInt: 2540
+DEBUG : 2017/05/17 13:46:52 decorator.go:107: backing off...
+client: 13:46:53 GET http://web03:3000
+DEBUG : 2017/05/17 13:46:53 metrics.go:66: - randInt: 456
+INFO  : 13:46:54 SUCCESS!
+DEBUG : 2017/05/17 13:46:54 requester.go:65: > 3 requests done.
+DEBUG : 2017/05/17 13:47:00 requester.go:114: makeRequest: 
+client: 13:47:00 GET http://web01:3000
+DEBUG : 2017/05/17 13:47:00 metrics.go:66: - randInt: 3300
+DEBUG : 2017/05/17 13:47:01 decorator.go:107: backing off...
+client: 13:47:01 GET http://web02:3000
+DEBUG : 2017/05/17 13:47:01 metrics.go:66: - randInt: 694
+INFO  : 13:47:02 SUCCESS!
+DEBUG : 2017/05/17 13:47:02 requester.go:65: > 4 requests done.
+DEBUG : 2017/05/17 13:47:10 requester.go:114: makeRequest: 
+client: 13:47:10 GET http://web03:3000
+DEBUG : 2017/05/17 13:47:10 metrics.go:66: - randInt: 3511
+DEBUG : 2017/05/17 13:47:11 decorator.go:107: backing off...
+client: 13:47:11 GET http://web01:3000
+DEBUG : 2017/05/17 13:47:11 metrics.go:66: - randInt: 3162
+DEBUG : 2017/05/17 13:47:12 decorator.go:107: backing off...
+client: 13:47:13 GET http://web02:3000
+DEBUG : 2017/05/17 13:47:13 metrics.go:66: - randInt: 89
+INFO  : 13:47:13 SUCCESS!
+DEBUG : 2017/05/17 13:47:14 requester.go:65: > 5 requests done.
+DEBUG : 2017/05/17 13:47:20 requester.go:114: makeRequest: 
+client: 13:47:20 GET http://web03:3000
+DEBUG : 2017/05/17 13:47:20 metrics.go:66: - randInt: 4728
+DEBUG : 2017/05/17 13:47:21 decorator.go:107: backing off...
+client: 13:47:21 GET http://web01:3000
+DEBUG : 2017/05/17 13:47:21 metrics.go:66: - randInt: 3274
+DEBUG : 2017/05/17 13:47:22 decorator.go:107: backing off...
+client: 13:47:23 GET http://web02:3000
+DEBUG : 2017/05/17 13:47:23 metrics.go:66: - randInt: 1211
+DEBUG : 2017/05/17 13:47:24 decorator.go:107: backing off...
+INFO  : 13:47:26 FAILURE!
+DEBUG : 2017/05/17 13:47:26 requester.go:65: > 6 requests done.
+DEBUG : 2017/05/17 13:47:30 requester.go:114: makeRequest: 
+client: 13:47:30 GET http://web03:3000
+DEBUG : 2017/05/17 13:47:30 metrics.go:66: - randInt: 1445
+DEBUG : 2017/05/17 13:47:31 decorator.go:107: backing off...
+client: 13:47:31 GET http://web01:3000
+DEBUG : 2017/05/17 13:47:31 metrics.go:66: - randInt: 3237
+DEBUG : 2017/05/17 13:47:32 decorator.go:107: backing off...
+client: 13:47:33 GET http://web02:3000
+DEBUG : 2017/05/17 13:47:33 metrics.go:66: - randInt: 4106
+DEBUG : 2017/05/17 13:47:34 decorator.go:107: backing off...
+INFO  : 13:47:36 FAILURE!
+DEBUG : 2017/05/17 13:47:36 requester.go:65: > 7 requests done.
+DEBUG : 2017/05/17 13:47:40 requester.go:114: makeRequest: 
+client: 13:47:40 GET http://web03:3000
+DEBUG : 2017/05/17 13:47:40 metrics.go:66: - randInt: 495
+INFO  : 13:47:41 SUCCESS!
+DEBUG : 2017/05/17 13:47:41 requester.go:65: > 8 requests done.
+DEBUG : 2017/05/17 13:47:50 requester.go:114: makeRequest: 
+client: 13:47:50 GET http://web01:3000
+DEBUG : 2017/05/17 13:47:50 metrics.go:66: - randInt: 466
+INFO  : 13:47:51 SUCCESS!
+DEBUG : 2017/05/17 13:47:51 requester.go:65: > 9 requests done.
+DEBUG : 2017/05/17 13:48:00 requester.go:114: makeRequest: 
+client: 13:48:00 GET http://web02:3000
+DEBUG : 2017/05/17 13:48:00 metrics.go:66: - randInt: 1528
+DEBUG : 2017/05/17 13:48:01 decorator.go:107: backing off...
+client: 13:48:01 GET http://web03:3000
+DEBUG : 2017/05/17 13:48:01 metrics.go:66: - randInt: 1258
+DEBUG : 2017/05/17 13:48:02 decorator.go:107: backing off...
+client: 13:48:03 GET http://web01:3000
+DEBUG : 2017/05/17 13:48:03 metrics.go:66: - randInt: 3047
+DEBUG : 2017/05/17 13:48:04 decorator.go:107: backing off...
+INFO  : 13:48:06 FAILURE!
+DEBUG : 2017/05/17 13:48:06 requester.go:108: All requests done.
+INFO  : 13:48:06 
+>> It took 1m46.003136757s
+INFO  : 13:48:06 metrics
+INFO  : 13:48:06 Go to http://127.0.0.1:3000/easy-metrics?show=Stats
+INFO  : 13:48:06 CTRL+C to exit
+DEBUG : 2017/05/17 13:48:09 metrics.go:66: - randInt: 4947

@@ -1,0 +1,58 @@
+^C  ~/clients/packt/dev/go/src/bitbucket.org/lsheehan/fp-in-go/chapter5 $ go run main.go
+INFO  : 13:02:30 Metrics server listening on 127.0.0.1:3000
+INFO  : 13:02:31 Proxy listening on 127.0.0.1:8080
+client: 13:02:33 GET http://127.0.0.1:3000
+client: 13:02:34 GET http://web02:3000
+client: 13:02:35 GET http://web03:3000
+client: 13:02:36 GET http://web01:3000
+client: 13:02:36 GET http://web02:3000
+INFO  : 13:02:36 SUCCESS!
+-------
+
+client: 13:02:37 GET http://web03:3000
+INFO  : 13:02:38 SUCCESS!
+-------
+
+client: 13:02:38 GET http://web01:3000
+client: 13:02:39 GET http://web02:3000
+client: 13:02:40 GET http://web03:3000
+client: 13:02:41 GET http://web01:3000
+INFO  : 13:02:41 FAILURE!
+-------
+
+INFO  : 13:02:42 SUCCESS!
+-------
+
+client: 13:02:42 GET http://web02:3000
+client: 13:02:43 GET http://web03:3000
+INFO  : 13:02:44 SUCCESS!
+-------
+
+client: 13:02:45 GET http://web01:3000
+INFO  : 13:02:45 FAILURE!
+-------
+
+INFO  : 13:02:45 SUCCESS!
+-------
+
+client: 13:02:47 GET http://web02:3000
+INFO  : 13:02:47 SUCCESS!
+-------
+
+client: 13:02:49 GET http://web03:3000
+client: 13:02:50 GET http://web01:3000
+client: 13:02:51 GET http://web02:3000
+client: 13:02:52 GET http://web03:3000
+client: 13:02:52 GET http://web01:3000
+client: 13:02:54 GET http://web02:3000
+INFO  : 13:02:55 FAILURE!
+-------
+
+INFO  : 13:02:57 FAILURE!
+-------
+
+INFO  : 13:02:57
+>> It took 26.005951349s
+INFO  : 13:02:57 metrics
+INFO  : 13:02:57 Go to http://127.0.0.1:3000/easy-metrics?show=Stats
+INFO  : 13:02:57 CTRL+C to exit

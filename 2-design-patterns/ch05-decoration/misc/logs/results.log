@@ -1,0 +1,77 @@
+INFO  : 17:03:13 Metrics server listening on%!(EXTRA string=127.0.0.1:3000)
+INFO  : 17:03:14 Proxy listening on%!(EXTRA string=127.0.0.1:3000)
+DEBUG : 2017/05/16 17:03:16 requester.go:114: makeRequest: 
+client: 17:03:16 GET http://127.0.0.1:3000
+client: 17:03:17 GET http://web02:3000
+DEBUG : 2017/05/16 17:03:18 requester.go:114: makeRequest: 
+client: 17:03:18 GET http://web03:3000
+client: 17:03:19 GET http://web01:3000
+client: 17:03:19 GET http://web02:3000
+INFO  : 17:03:19 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:20 requester.go:65: > 1 requests done.
+DEBUG : 2017/05/16 17:03:20 requester.go:114: makeRequest: 
+client: 17:03:20 GET http://web03:3000
+INFO  : 17:03:21 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:21 requester.go:65: > 2 requests done.
+client: 17:03:21 GET http://web01:3000
+DEBUG : 2017/05/16 17:03:22 requester.go:114: makeRequest: 
+client: 17:03:22 GET http://web02:3000
+client: 17:03:23 GET http://web03:3000
+DEBUG : 2017/05/16 17:03:24 requester.go:114: makeRequest: 
+client: 17:03:24 GET http://web01:3000
+INFO  : 17:03:24 FAULURE!
+-------
+
+DEBUG : 2017/05/16 17:03:24 requester.go:65: > 3 requests done.
+INFO  : 17:03:25 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:25 requester.go:65: > 4 requests done.
+client: 17:03:25 GET http://web02:3000
+DEBUG : 2017/05/16 17:03:26 requester.go:114: makeRequest: 
+client: 17:03:26 GET http://web03:3000
+INFO  : 17:03:27 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:27 requester.go:65: > 5 requests done.
+DEBUG : 2017/05/16 17:03:28 requester.go:114: makeRequest: 
+client: 17:03:28 GET http://web01:3000
+INFO  : 17:03:28 FAULURE!
+-------
+
+DEBUG : 2017/05/16 17:03:28 requester.go:65: > 6 requests done.
+INFO  : 17:03:28 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:29 requester.go:65: > 7 requests done.
+DEBUG : 2017/05/16 17:03:30 requester.go:114: makeRequest: 
+client: 17:03:30 GET http://web02:3000
+INFO  : 17:03:30 SUCCESS!
+-------
+
+DEBUG : 2017/05/16 17:03:31 requester.go:65: > 8 requests done.
+DEBUG : 2017/05/16 17:03:32 requester.go:114: makeRequest: 
+client: 17:03:32 GET http://web03:3000
+client: 17:03:33 GET http://web01:3000
+DEBUG : 2017/05/16 17:03:34 requester.go:114: makeRequest: 
+client: 17:03:34 GET http://web02:3000
+client: 17:03:35 GET http://web03:3000
+client: 17:03:35 GET http://web01:3000
+client: 17:03:37 GET http://web02:3000
+INFO  : 17:03:38 FAULURE!
+-------
+
+DEBUG : 2017/05/16 17:03:38 requester.go:65: > 9 requests done.
+INFO  : 17:03:40 FAULURE!
+-------
+
+DEBUG : 2017/05/16 17:03:40 requester.go:108: All requests done.
+INFO  : 17:03:40 
+>> It took 26.004486783s
+INFO  : 17:03:40 metrics
+INFO  : 17:03:40 Go to http://127.0.0.1:3000/easy-metrics?show=Stats
+INFO  : 17:03:40 CTRL+C to exit

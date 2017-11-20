@@ -1,0 +1,19 @@
+package: .
+import:
+- package: cloud.google.com/go
+  subpackages:
+  - storage
+- package: github.com/BurntSushi/toml
+- package: github.com/pkg/errors
+- package: github.com/sirupsen/logrus
+- package: google.golang.org/api
+  subpackages:
+  - iterator
+  - option
+ignore:
+- ./domain
+- ./infrastructure
+- ./interfaces
+- ./mypackage
+- ./usecases
+- ./utils

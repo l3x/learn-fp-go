@@ -1,0 +1,19 @@
+#@IgnoreInspection BashAddShebang
+
+# Port that the API listens on
+port = "8080"
+
+# Whether to log debug output to the log (set to true for debug purposes)
+log_debug_info = true
+
+# Buffer size (not currently used)
+initial_buffer_size = 20
+
+# Maximum number of concurrent connections (not currently used)
+max_concurrent_connections = 4
+
+# Maximum number that user is allowed to enter
+max_number = 256
+
+# Use number handler (to display number, optionally with FormatNumber applied) else display files in project root
+use_number_handler = true

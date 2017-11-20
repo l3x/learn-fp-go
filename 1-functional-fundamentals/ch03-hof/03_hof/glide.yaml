@@ -1,0 +1,6 @@
+package: .
+import:
+- package: github.com/julienschmidt/httprouter
+ignore:
+- ./hof
+- ./mypackage

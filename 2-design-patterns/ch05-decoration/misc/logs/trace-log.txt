@@ -1,0 +1,119 @@
+INFO  : 19:04:02 Metrics server listening on 127.0.0.1:3000
+INFO  : 19:04:03 Proxy listening on 127.0.0.1:8080
+DEBUG : 2017/05/17 19:04:03 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:04 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:04 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:05 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:05 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:06 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:06 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:07 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:07 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:08 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:08 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:09 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:09 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:10 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:10 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:11 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:11 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:12 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:12 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:13 requestor.go:85: makeRequest: 
+client: 19:04:13 GET http://127.0.0.1:3000
+DEBUG : 2017/05/17 19:04:13 metrics.go:66: - randInt: 3081
+DEBUG : 2017/05/17 19:04:13 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:13 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:14 decorator.go:103: backing off...
+client: 19:04:14 GET http://web02:3000
+DEBUG : 2017/05/17 19:04:14 metrics.go:66: - randInt: 2887
+DEBUG : 2017/05/17 19:04:14 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:14 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:15 decorator.go:103: backing off...
+DEBUG : 2017/05/17 19:04:15 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:15 requestor.go:34: newResponseCount: 0
+client: 19:04:16 GET http://web03:3000
+DEBUG : 2017/05/17 19:04:16 metrics.go:66: - randInt: 1847
+DEBUG : 2017/05/17 19:04:16 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:16 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:17 decorator.go:103: backing off...
+DEBUG : 2017/05/17 19:04:17 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:17 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:18 requestor.go:34: newResponseCount: 0
+DEBUG : 2017/05/17 19:04:18 requestor.go:34: newResponseCount: 0
+INFO  : 19:04:19 FAILURE!
+DEBUG : 2017/05/17 19:04:19 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:19 requestor.go:36: oldResponseCount < newResponseCount, oldResponseCount: 0, newResponseCount: 1
+DEBUG : 2017/05/17 19:04:19 requestor.go:38: > 1 requests done.
+DEBUG : 2017/05/17 19:04:19 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:20 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:20 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:21 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:21 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:22 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:22 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:23 requestor.go:85: makeRequest: 
+client: 19:04:23 GET http://web01:3000
+DEBUG : 2017/05/17 19:04:23 metrics.go:66: - randInt: 4059
+DEBUG : 2017/05/17 19:04:23 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:23 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:24 decorator.go:103: backing off...
+client: 19:04:24 GET http://web02:3000
+DEBUG : 2017/05/17 19:04:24 metrics.go:66: - randInt: 2081
+DEBUG : 2017/05/17 19:04:24 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:24 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:25 decorator.go:103: backing off...
+DEBUG : 2017/05/17 19:04:25 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:25 requestor.go:34: newResponseCount: 1
+client: 19:04:26 GET http://web03:3000
+DEBUG : 2017/05/17 19:04:26 metrics.go:66: - randInt: 1318
+DEBUG : 2017/05/17 19:04:26 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:26 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:27 decorator.go:103: backing off...
+DEBUG : 2017/05/17 19:04:27 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:27 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:28 requestor.go:34: newResponseCount: 1
+DEBUG : 2017/05/17 19:04:28 requestor.go:34: newResponseCount: 1
+INFO  : 19:04:29 FAILURE!
+DEBUG : 2017/05/17 19:04:29 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:29 requestor.go:36: oldResponseCount < newResponseCount, oldResponseCount: 1, newResponseCount: 2
+DEBUG : 2017/05/17 19:04:29 requestor.go:38: > 2 requests done.
+DEBUG : 2017/05/17 19:04:29 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:30 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:30 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:31 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:31 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:32 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:32 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:33 requestor.go:85: makeRequest: 
+client: 19:04:33 GET http://web01:3000
+DEBUG : 2017/05/17 19:04:33 metrics.go:66: - randInt: 4425
+DEBUG : 2017/05/17 19:04:33 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:33 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:34 decorator.go:103: backing off...
+client: 19:04:34 GET http://web02:3000
+DEBUG : 2017/05/17 19:04:34 metrics.go:66: - randInt: 2540
+DEBUG : 2017/05/17 19:04:34 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:34 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:35 decorator.go:103: backing off...
+DEBUG : 2017/05/17 19:04:35 requestor.go:34: newResponseCount: 2
+DEBUG : 2017/05/17 19:04:35 requestor.go:34: newResponseCount: 2
+client: 19:04:36 GET http://web03:3000
+DEBUG : 2017/05/17 19:04:36 metrics.go:66: - randInt: 456
+DEBUG : 2017/05/17 19:04:36 requestor.go:34: newResponseCount: 2
+INFO  : 19:04:36 SUCCESS!
+DEBUG : 2017/05/17 19:04:36 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:36 requestor.go:36: oldResponseCount < newResponseCount, oldResponseCount: 2, newResponseCount: 3
+DEBUG : 2017/05/17 19:04:36 requestor.go:38: > 3 requests done.
+DEBUG : 2017/05/17 19:04:37 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:37 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:38 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:38 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:39 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:39 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:40 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:40 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:41 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:41 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:42 requestor.go:34: newResponseCount: 3
+DEBUG : 2017/05/17 19:04:42 requestor.go:34: newResponseCount: 3

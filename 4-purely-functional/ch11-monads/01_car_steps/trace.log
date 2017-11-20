@@ -1,0 +1,14 @@
+AppEnv: development
+----
+Processing car # 1
+IN : eyJjYXIiOnsidmluIjoiREc1NDVIRzQ5NDU5WiIsIm1ha2UiOiJUb3lvdGEiLCJtb2RlbCI6IkhpZ2hsYW5kZXIiLCJvcHRpb25zIjp7Im9wdGlvbl8xIjoiSGVhdGVkIFNlYXRzIiwib3B0aW9uXzIiOiJQb3dlciBTdGVlcmluZyIsIm9wdGlvbl8zIjoiR1BTIn19fQ0K
+OUT: {"car":{"vin":"DG545HG49459Z","make":"Toyota","model":"Highlander","options":{"option_1":"Heated Seats","option_2":"Power Steering","option_3":"GPS"}},"timestamp":"20171030203918"}
+----
+Processing car # 2
+IN : eyJjYXIiOnsidmluIjoiMzQ4NTQzOTg1QVpERCIsIm1ha2UiOiJMZXh1cyIsIm1vZGVsIjoiSVMgMjUwIiwib3B0aW9ucyI6eyJvcHRpb25fMSI6IlN0aWNrIFNoaWZ0Iiwib3B0aW9uXzIiOiJNb29uIFJvb2YiLCJvcHRpb25fMyI6IkxlYXRoZXIifX19DQo=
+OUT: {"car":{"vin":"348543985AZDD","make":"Lexus","model":"IS 250","options":{"option_1":"Stick Shift","option_2":"Moon Roof","option_3":"Leather"}},"timestamp":"20171030205535"}
+----
+Processing car # 3
+IN : eyJjYXIiOnsidmluIjoiTUZORkg2NkZCWlE5OSIsIm1ha2UiOiJIb25kYSIsIm1vZGVsIjoiQWNjb3JkIiwib3B0aW9ucyI6eyJvcHRpb25fMSI6IkFsbG95IFdoZWVscyIsIm9wdGlvbl8yIjoiUG93ZXIgU3RlZXJpbmcifX19
+OUT: {"car":{"vin":"MFNFH66FBZQ99","make":"Honda","model":"Accord","options":{"option_1":"Alloy Wheels","option_2":"Power Steering"}},"timestamp":"20171030205535"}
+----

@@ -1,0 +1,11 @@
+{
+  "illegal_base64_data": {
+    "other": "illegal base64 data at input byte {{.BytePos}}"
+  },
+  "json_unsupported_value": {
+    "other": "json: unsupported value: {{.Val}}"
+  },
+  "unexpected_end_of_json_input": {
+    "other": "unexpected end of JSON input"
+  }
+}

@@ -1,0 +1,55 @@
+#@IgnoreInspection BashAddShebang
+
+# Runtime environment. Determines whether to run semver scripts or expect env vars
+app_env = "development"
+
+# Project root directory (used for referencing scripts and API server)
+project_root_dir = "/Users/lex/clients/packt/dev/fp-go/2-design-patterns/ch06-onion-arch/04_onion"
+
+# Where files are downloaded
+download_dir = "/Users/lex/clients/packt/dev/fp-go/2-design-patterns/ch06-onion-arch/04_onion/downloads"
+
+# Parent folders for the log files on Google Cloud Storage
+gcp_source_dir = "source-events"
+
+# Source key file for Google Cloud Platform
+gcp_source_key_file = "/Users/lex/clients/packt/dev/fp-go/2-design-patterns/ch06-onion-arch/04_onion/keys/google-cloud-storage/source/onion-source-key.json"
+
+# Source GCP project id for
+gcp_source_project_id = "rdbx-168418"
+
+# Parent folders for the log files on Google Cloud Storage
+gcp_sink_dir = "sink-events"
+
+# Sink key file for Google Cloud Platform
+gcp_sink_key_file = "/Users/lex/clients/packt/dev/fp-go/2-design-patterns/ch06-onion-arch/04_onion/keys/google-cloud-storage/sink/onion-sink-key.json"
+
+# GCP sink project id for
+gcp_sink_project_id = "rdbx-168418"
+
+# Cloud bucket where the log files to be processed
+source_bucket_name = "lexttc3-my-backup-bucket"
+
+# Cloud bucket where they are to be copied after processing
+sink_bucket_name = "lexttc3-my-backup-bucket"
+
+# How often to pull logs from Google Cloud bucket
+fetch_interval = "60s"
+
+# The port the API will listen on
+api_port = "8080"
+
+# Enable or disable logging of utils/TimeTrack() (For benchmarking/debugging)
+log_timetrack = true
+
+# Whether to display full stack traces in log files
+log_full_stack_traces = false
+
+# Whether to log debug output to the log (set to true for debug purposes)
+log_debug_info = true
+
+# Whether to log debug output to the log when running tests (set to true for debug purposes)
+log_debug_info_for_tests = false
+
+# Run web service tests only to determine if the endpoints are active
+test_return_code_only = false

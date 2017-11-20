@@ -1,0 +1,22 @@
+#@IgnoreInspection BashAddShebang
+
+# Full path to the file containing the base64 car strings
+data_filepath = "./data/cars.base64"
+
+# Runtime environment
+app_env = "development"
+
+# Level options: panic, error, info, debug
+log_level = "debug"
+
+# The character(s) used to preface debug lines
+log_debug_chars = ">>"
+
+# Whether to include timestamps and log level on all log entries
+log_verbose = true
+
+# Enable or disable logging of utils/TimeTrack() (For benchmarking/debugging)
+log_timetrack = true
+
+# i18n translation file name, see github.com/nicksnyder/go-i18n
+i18n_filename = "en-us.all.json"

@@ -1,0 +1,12 @@
+package interfaces
+
+import (
+	"domain"
+)
+
+// Called by local-file-exists Api
+func GetFile(fileName string) (localFile *domain.File, err error) {
+	// could return from a cache
+	return domain.NewFile(fileName), nil
+}
+

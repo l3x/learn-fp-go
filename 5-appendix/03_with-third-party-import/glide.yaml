@@ -1,0 +1,6 @@
+package: .
+import:
+- package: github.com/go-goodies/go_utils
+ignore:
+- ./packagea
+- ./packageb

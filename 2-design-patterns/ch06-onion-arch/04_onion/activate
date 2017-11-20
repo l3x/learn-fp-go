@@ -1,0 +1,25 @@
+#!/bin/bash
+# Source me!
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+export GOPATH=$DIR:$GOPATH
+echo "GOPATH: $GOPATH"
+APP_NAME=$(basename $(pwd))
+GOVERSION=$(go version)
+echo "go version: $GOVERSION"
+if [ -z $GOVERSION ] || [ "$GOVERSION" < "go1.8.3" ]; then
+    echo "Go version 1.8.3 or above should be installed"
+    exit 2
+fi
+if [ -e ./config.toml ]; then
+    echo "You are missing the config.toml configuration file"
+    exit 2
+fi
+
+alias glide-ignore-project-dirs="printf \"ignore:\n$(find ./src -maxdepth 1 -type d | tail -n +2 | sed 's|./src\/||' | sed -e 's/^/- \.\//')\n\""
+alias mvglide='mkdir -p vendors && mv vendor/ vendors/src/ && export GOPATH=$(pwd):$(pwd)/vendors;echo "vendor packages have been moved to $(pwd)/vendors and your GOPATH: $GOPATH"'
+alias glide-install='rm -rf {vendor,vendors};rm glide.*;export GOPATH=$(pwd):$(pwd)/vendors && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide'
+alias go-run="go install && $APP_NAME -config ./config.toml"
+
+echo You should only need to run this init script once.
+echo Run glide-install after updating dependencies, i.e., adding a new import statement.
+echo After running glide-install, run  go-run to build and run your app.
