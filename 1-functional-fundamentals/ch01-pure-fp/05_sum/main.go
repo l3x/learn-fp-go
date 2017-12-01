@@ -1,10 +1,10 @@
 package main
 
 import (
-////////////////    "mypackage"
+//////////////////    "mypackage"
 )
 
 func main() {
     println("hello from main.go")
-////////////////    println(mypackage.MyName() + " says hi from mypackage")
+//////////////////    println(mypackage.MyName() + " says hi from mypackage")
 }

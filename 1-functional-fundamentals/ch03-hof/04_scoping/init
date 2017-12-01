@@ -7,8 +7,15 @@ MY_DEV_DIR=~/dev
 CURRENT_GO_VERSION=1.9.2
 USES_TOML_CONFIG_YN=no
 LOCAL_BIN_DIR=/usr/local/bin/
+#WIN_GOPATH="E:\\\esradmin\\\dev\\\learn-fp-go\\\1-functional-fundamentals\\\ch01-pure-fp\\\01_oop"
 # ---------------------------------------------------------------
 # Verify variables above are correct.  Do not modify lines below.
+if [ ! -z $WIN_GOPATH ]; then
+    export GOPATH="$WIN_GOPATH"
+    export GOBIN="$GOPATH\\bin"
+    pushd $HOME
+    popd
+fi
 if [ -L "$(pwd)" ]; then
     echo "You must be in the real project directory to run this init script.  You are currently in a linked directory"
     echo "Running:  ln -l \"$(pwd)\""
@@ -30,8 +37,10 @@ set -x
 ln -s "$ORIG_DIR" "$PROJECT_DIR_LINK"
 { set +x; } 2>/dev/null
 cd "$PROJECT_DIR_LINK"
-export GOPATH=$ORIG_DIR
-export GOBIN=$ORIG_DIR/bin
+if [ -z $WIN_GOPATH ]; then
+    export GOPATH=$ORIG_DIR
+    export GOBIN=$ORIG_DIR/bin
+fi
 if [ -e "$GOBIN" ]; then
     rm "$GOBIN/*" 2>/dev/null
 else
@@ -41,7 +50,8 @@ fi
 APP_NAME=$(basename $(pwd))
 GOVERSION=$(go version)
 echo "Installed Go version: $GOVERSION"
-if [[ $(type goenv) ]]; then
+type goenv 2>/dev/null
+if [ $? == 0 ]; then
     # Attempt to automatically set desired/current go version.  This requires goenv.
     . goenv "$CURRENT_GO_VERSION"
     echo "GOVERSION: $GOVERSION"
@@ -121,20 +131,33 @@ if [[ "$USES_TOML_CONFIG_YN" =~ ^(yes|y)$ ]]; then
         echo -e "# Runtime environment\napp_env = \"development\"" > config.toml
     fi
     ls -l config.toml
-    alias go-run="go install && $APP_NAME -config ./config.toml"
+    if [ ! -z $WIN_GOPATH ]; then
+        alias go-run="go build && ./$APP_NAME.exe -config ./config.toml"
+    else
+        alias go-run="go install && $APP_NAME -config ./config.toml"
+    fi
 else
-    alias go-run="go install && $APP_NAME"
+    if [ ! -z $WIN_GOPATH ]; then
+        alias go-run="go build && ./$APP_NAME.exe"
+    else
+        alias go-run="go install && $APP_NAME"
+    fi
 fi
 alias go-test='go test  ./... 2>&1 | grep -v "$(basename $(pwd))\t\[no test files"'
 alias go-test-bench='go test -bench=. ./... 2>&1 | grep -v "$(basename $(pwd))\t\[no test files"'
 alias glide-ignore-project-dirs="printf \"ignore:\n$(find ./src -maxdepth 1 -type d | tail -n +2 | sed 's|./src\/||' | sed -e 's/^/- \.\//')\n\""
-alias mvglide='mkdir -p vendors && mv vendor/ vendors/src/ && export GOPATH=$(pwd)/vendors:$(pwd);echo "vendor packages have been moved to $(pwd)/vendors and your GOPATH: $GOPATH"'
 alias glide-update='if [ ! -z $(readlink `pwd`) ]; then export LINKED=true && pushd "$(readlink `pwd`)"; fi;rm -rf {vendor,vendors};rm glide.*;export GOPATH=$(pwd):$(pwd)/vendors && export GOBIN=$(pwd)/bin && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide && if [ $LINKED==true ]; then popd;fi'
 alias prune-project="(rm -rf bin pkg vendors;rm glide.lock;rm -rf ./src/mypackage;sed -i -e '/mypackage/ s/^#*/\/\//' main.go) 2>/dev/null"
 alias show-path='echo $PATH | tr ":" "\n"'
 alias prune-path='export PATH="$(echo $PATH | tr ":" "\n" | uniq | grep -v "$(dirname $ORIG_DIR)" | tr "\n" ":")"; if [[ "$PATH" =~ ':'$ ]]; then export PATH="${PATH::-1}";fi'
 alias find-imports='find . -type f -name "*.go" -exec grep -A3 "import" {} \; -exec echo {} \; -exec echo --- \;'
 alias go-fmt='set -x;goimports -w main.go src/*;{ set +x; } 2>/dev/null'
+if [ ! -z $WIN_GOPATH ]; then
+    export GOPATH="$WIN_GOPATH"
+    alias mvglide='mkdir -p vendors && mv vendor/ vendors/src/ && export GOPATH="$GOPATH"/vendors:"$GOPATH";echo "vendor packages have been moved to $(pwd)/vendors and your GOPATH: $GOPATH"'
+else
+    alias mvglide='mkdir -p vendors && mv vendor/ vendors/src/ && export GOPATH=$(pwd)/vendors:$(pwd);echo "vendor packages have been moved to $(pwd)/vendors and your GOPATH: $GOPATH"'
+fi
 tdml() {
    if [ -z $1 ]; then LEVEL=2; else LEVEL=$1;fi
    tree -C -d -L $LEVEL
@@ -145,7 +168,13 @@ get-go-binary() {
         echo "Missing GO_BINARY_URL.  Usage: get-go-binary <GO_BINARY_URL>   Example: get-go-binary github.com/nicksnyder/go-i18n/goi18n"
         return
     fi
-    TMP_DIR="tmp_dir_$RANDOM"; mkdir "$TMP_DIR"; pushd "$TMP_DIR"; export GOPATH="$(pwd)"; go get -u $GO_BINARY_URL; popd; rm -rf "$TMP_DIR"
+    TMP_DIR="tmp_dir_$RANDOM"; mkdir "$TMP_DIR"; pushd "$TMP_DIR";
+    if [ ! -z $WIN_GOPATH ]; then
+        export GOPATH="$WIN_GOPATH"
+    else
+        export GOPATH="$(pwd)"
+    fi
+    go get -u $GO_BINARY_URL; popd; rm -rf "$TMP_DIR"
 }
 echo You should only need to run this init script once.
 echo Add Go source code files under the src directory.
