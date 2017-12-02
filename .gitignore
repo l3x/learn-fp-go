@@ -16,6 +16,10 @@
 # Temp files created by sed
 *.go-e
 
+# Temp log files created by some apps
+trace.log
+trace-log.txt
+
 # My stuff
 lex/
 wip/
