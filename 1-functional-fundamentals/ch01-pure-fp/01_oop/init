@@ -153,7 +153,7 @@ alias find-imports='find . -type f -name "*.go" -exec grep -A3 "import" {} \; -e
 alias go-fmt='set -x;goimports -w main.go src/*;{ set +x; } 2>/dev/null'
 if [ ! -z $WIN_GOPATH ]; then
     export GOPATH="$WIN_GOPATH"
-    alias glide-update='if [ ! -z $(readlink `pwd`) ]; then export LINKED=true && pushd "$(readlink `pwd`)"; fi;rm -rf {vendor,vendors};rm glide.* 2>/dev/null;export GOPATH="$GOPATH:$GOPATH\\\vendors" && export GOBIN="$WIN_GOPATH/bin" && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide && if [ $LINKED==true ]; then popd;fi'
+    alias glide-update='if [ ! -z $(readlink `pwd`) ]; then export LINKED=true && pushd "$(readlink `pwd`)"; fi;rm -rf {vendor,vendors};rm glide.* 2>/dev/null;export GOPATH="$WIN_GOPATH:$WIN_GOPATH\\\vendors" && export GOBIN="$WIN_GOPATH/bin" && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide && if [ $LINKED==true ]; then popd;fi'
     alias mvglide='mkdir -p vendors && mv vendor/ vendors/src/ && export GOPATH="$GOPATH"\\\\vendors:"$GOPATH";echo "vendor packages have been moved to $(pwd)/vendors and your GOPATH: $GOPATH"'
 else
     alias glide-update='if [ ! -z $(readlink `pwd`) ]; then export LINKED=true && pushd "$(readlink `pwd`)"; fi;rm -rf {vendor,vendors};rm glide.* 2>/dev/null;export GOPATH=$(pwd):$(pwd)/vendors && export GOBIN=$(pwd)/bin && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide && if [ $LINKED==true ]; then popd;fi'
