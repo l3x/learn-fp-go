@@ -1,5 +1,7 @@
 package main
 
+import "fmt"
+
 type Car struct {
 	Make  string
 	Model  string
@@ -11,7 +13,6 @@ func (car Car) Upgrade() *Car {
 }
 
 func main() {
-
 	is250 := &Car{"Lexus", "IS250"}
 	accord := &Car{"Honda", "Accord"}
 	cars := []*Car{is250, accord}
@@ -21,9 +22,7 @@ func main() {
 		upgradedCars = append(upgradedCars, car.Upgrade())
 		count ++
 	}
-
-}
-
-type Car struct {
-	const Make, Model string
+	for _, upgradedCar := range upgradedCars {
+		fmt.Printf("upgradedCar: %+v\n", upgradedCar)
+	}
 }

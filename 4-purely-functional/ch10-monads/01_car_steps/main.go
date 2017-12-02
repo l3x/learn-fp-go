@@ -5,7 +5,6 @@ import (
 	. "utils"
 	"bufio"
 	"os"
-	"io"
 )
 
 func init() {

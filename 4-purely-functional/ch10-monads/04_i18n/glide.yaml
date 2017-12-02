@@ -1,8 +1,0 @@
-package: .
-import:
-- package: github.com/nicksnyder/go-i18n
-  subpackages:
-  - i18n
-ignore:
-- ./mypackage
-- ./i18n

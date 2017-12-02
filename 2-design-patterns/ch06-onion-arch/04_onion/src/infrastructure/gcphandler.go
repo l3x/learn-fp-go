@@ -172,7 +172,7 @@ type List interface {
 	Size() int
 	Tail() List
 }
-func NewList() List
+
 type Map interface {
 	Delete(key string) Map
 	ForEach(f func(key string, val interface{}))
@@ -184,4 +184,3 @@ type Map interface {
 	String() string
 	UnsafeMutableSet(key string, value interface{}) Map
 }
-func NewMap() Map

@@ -1,9 +1,0 @@
-package: .
-import:
-- package: github.com/BurntSushi/toml
-- package: github.com/kardianos/osext
-- package: github.com/pkg/errors
-- package: github.com/sirupsen/logrus
-ignore:
-- ./functor
-- ./utils

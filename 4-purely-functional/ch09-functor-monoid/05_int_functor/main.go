@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("imperative loop:", impInts)
 
 	add2 := func(i int) int { return i + 2 }
-	fpInts := Wrap(ints).Map(add2)
+	fpInts := Functor(ints).Map(add2)
 	fmt.Println("fp map:", fpInts)
 }
 

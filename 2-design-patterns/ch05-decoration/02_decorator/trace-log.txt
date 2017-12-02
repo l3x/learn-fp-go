@@ -1,0 +1,2 @@
+INFO  : 18:48:34 Metrics server listening on 127.0.0.1:3000
+INFO  : 18:48:35 Proxy listening on 127.0.0.1:8080

@@ -7,7 +7,7 @@ MY_DEV_DIR=~/dev
 CURRENT_GO_VERSION=1.9.2
 USES_TOML_CONFIG_YN=no
 LOCAL_BIN_DIR=/usr/local/bin/
-#WIN_GOPATH="E:\\\esradmin\\\dev\\\learn-fp-go\\\1-functional-fundamentals\\\ch01-pure-fp\\\01_oop"
+#WIN_GOPATH="E:\\\alice\\\dev\\\learn-fp-go\\\1-functional-fundamentals\\\ch01-pure-fp\\\01_oop"
 # ---------------------------------------------------------------
 # Verify variables above are correct.  Do not modify lines below.
 if [ ! -z $WIN_GOPATH ]; then
@@ -147,7 +147,7 @@ alias go-test='go test  ./... 2>&1 | grep -v "$(basename $(pwd))\t\[no test file
 alias go-test-bench='go test -bench=. ./... 2>&1 | grep -v "$(basename $(pwd))\t\[no test files"'
 alias glide-ignore-project-dirs="printf \"ignore:\n$(find ./src -maxdepth 1 -type d | tail -n +2 | sed 's|./src\/||' | sed -e 's/^/- \.\//')\n\""
 alias glide-update='if [ ! -z $(readlink `pwd`) ]; then export LINKED=true && pushd "$(readlink `pwd`)"; fi;rm -rf {vendor,vendors};rm glide.*;export GOPATH=$(pwd):$(pwd)/vendors && export GOBIN=$(pwd)/bin && glide init --non-interactive && glide-ignore-project-dirs >> glide.yaml && glide up && mvglide && if [ $LINKED==true ]; then popd;fi'
-alias prune-project="(rm -rf bin pkg vendors;rm glide.lock;rm -rf ./src/mypackage;sed -i -e '/mypackage/ s/^#*/\/\//' main.go) 2>/dev/null"
+alias prune-project="(rm -rf bin pkg vendors;rm glide.*;rm -rf ./src/mypackage;sed -i -e '/mypackage/ s/^#*/\/\//' main.go) 2>/dev/null"
 alias show-path='echo $PATH | tr ":" "\n"'
 alias prune-path='export PATH="$(echo $PATH | tr ":" "\n" | uniq | grep -v "$(dirname $ORIG_DIR)" | tr "\n" ":")"; if [[ "$PATH" =~ ':'$ ]]; then export PATH="${PATH::-1}";fi'
 alias find-imports='find . -type f -name "*.go" -exec grep -A3 "import" {} \; -exec echo {} \; -exec echo --- \;'

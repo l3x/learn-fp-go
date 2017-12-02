@@ -19,10 +19,10 @@ func (o CarWithSpare) Tires() int { return 5 }
 func (c CarWithSpare) PrintInfo() {
 	fmt.Printf("%v has %d tires\n", c, c.Tires())
 }
-func (c CarWithSpare) PrintInfo(upCase bool) {
-	if upCase {
-		fmt.Printf("%v HAS %d TIRES\n", c, c.Tires())
-	} else {
-		fmt.Printf("%v has %d tires\n", c, c.Tires())
-	}
-}
+//func (c CarWithSpare) PrintInfo(upCase bool) {
+//	if upCase {
+//		fmt.Printf("%v HAS %d TIRES\n", c, c.Tires())
+//	} else {
+//		fmt.Printf("%v has %d tires\n", c, c.Tires())
+//	}
+//}
