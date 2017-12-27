@@ -12,7 +12,7 @@ func main() {
 
     car, err := oop.MyCars.Find("Highlander")
     if err != nil {
-        fmt.Printf("ERROR: %+v", car)
+        fmt.Printf("ERROR: %+v", err)
     } else {
         fmt.Printf("Found %+v", car)
     }
