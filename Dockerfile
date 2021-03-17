@@ -1,25 +1,53 @@
-FROM golang:1.9.2
+FROM golang:1.15
+MAINTAINER Michele Bertasi
+MAINTAINER Aleksey Kislitsa
 
-#RUN apt update -y && apt install sudo -y
-RUN apt update -y && apt install sudo git vim -y
-RUN wget https://github.com/Masterminds/glide/releases/download/v0.13.3/glide-v0.13.3-linux-amd64.tar.gz -O /tmp/glide.tar.gz && \
-tar -C /tmp -xzf /tmp/glide.tar.gz && cp /tmp/linux-amd64/glide /usr/local/bin
+ADD fs/ /
 
-# Create non-root user
-RUN useradd -m dev && \
-  adduser dev sudo && \
-  echo "dev:dev" | chpasswd
+# install pagkages
+RUN apt-get update                                                      && \
+    apt-get install -y ncurses-dev libtolua-dev exuberant-ctags gdb     && \
+    ln -s /usr/include/lua5.2/ /usr/include/lua                         && \
+    ln -s /usr/lib/x86_64-linux-gnu/liblua5.2.so /usr/lib/liblua.so     && \
+# cleanup
+    apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Initilise base user
+# build and install vim
+RUN cd /tmp                                                             && \
+    git clone --depth 1 https://github.com/vim/vim.git                  && \
+    cd vim                                                              && \
+    ./configure --with-features=huge --enable-luainterp                    \
+        --enable-gui=no --without-x --prefix=/usr                       && \
+    make VIMRUNTIMEDIR=/usr/share/vim/vim82                             && \
+    make install                                                        && \
+# cleanup
+    rm -rf /tmp/* /var/tmp/*
+
+# get go tools
+RUN go get golang.org/x/tools/cmd/godoc                                 && \
+    go get github.com/nsf/gocode                                        && \
+    go get golang.org/x/tools/cmd/goimports                             && \
+    go get github.com/rogpeppe/godef                                    && \
+    go get golang.org/x/tools/cmd/gorename                              && \
+    go get golang.org/x/lint/golint                                     && \
+    go get github.com/kisielk/errcheck                                  && \
+    go get github.com/jstemmer/gotags                                   && \
+    go get github.com/tools/godep                                       && \
+    GO111MODULE=on go get golang.org/x/tools/gopls@latest               && \
+    mv /go/bin/* /usr/local/go/bin                                      && \
+# cleanup
+    rm -rf /go/src/* /go/pkg
+
+# add dev user
+RUN adduser dev --disabled-password --gecos ""                          && \
+    echo "ALL            ALL = (ALL) NOPASSWD: ALL" >> /etc/sudoers     && \
+    chown -R dev:dev /home/dev /go
+
 USER dev
-WORKDIR /home/dev
 ENV HOME /home/dev
-ENV PATH=/home/dev/go/bin:$PATH
-ENV GOPATH=/home/dev/go
-ENV GOROOT=/usr/local/go
-RUN go get golang.org/x/tools/cmd/goimports && \
-git clone https://github.com/fatih/vim-go.git ~/.vim/pack/plugins/start/vim-go && \
-git clone https://github.com/scrooloose/nerdtree.git ~/.vim/pack/dist/start/nerdtree && \
-git clone https://github.com/vim-airline/vim-airline ~/.vim/pack/dist/start/vim-airline && \
-git clone https://github.com/tpope/vim-fugitive.git ~/.vim/pack/dist/start/vim-fugitive
-COPY .vimrc /home/dev/.vimrc
+WORKDIR /home/dev
+
+# install vim plugins
+RUN curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim && \
+    vim +PlugInstall +qall
