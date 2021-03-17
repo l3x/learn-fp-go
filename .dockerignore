@@ -1,2 +1,4 @@
 *
 !fs/
+!go-env
+!go-ide

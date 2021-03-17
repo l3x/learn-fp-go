@@ -3,6 +3,8 @@ MAINTAINER Michele Bertasi
 MAINTAINER Aleksey Kislitsa
 
 ADD fs/ /
+ADD go-env /usr/local/bin
+ADD go-ide /usr/local/bin
 
 # install pagkages
 RUN apt-get update                                                      && \
