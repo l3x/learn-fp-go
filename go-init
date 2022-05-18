@@ -1,0 +1,7 @@
+#!/bin/sh
+
+gomodinit() {
+	go mod init ${PWD##*/} && go mod tidy
+}
+
+gomodinit

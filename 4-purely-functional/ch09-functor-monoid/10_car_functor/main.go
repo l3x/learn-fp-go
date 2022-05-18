@@ -3,7 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"functor"
+	"10_car_functor/functor"
 	"strings"
 )
 

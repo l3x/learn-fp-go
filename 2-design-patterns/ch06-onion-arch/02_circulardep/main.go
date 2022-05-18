@@ -1,6 +1,6 @@
 package main
 
-import a "packagea"
+import a "02_circulardep/packagea"
 
 func main() {
 	a.Atask()

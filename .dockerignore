@@ -2,3 +2,4 @@
 !fs/
 !go-env
 !go-ide
+!go-init

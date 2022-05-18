@@ -1,15 +1,15 @@
 package main
 
 import (
-	"server"
-	. "utils"
+	"01_func_param/server"
+	. "01_func_param/utils"
 	"context"
+	"fmt"
 	"io/ioutil"
 	"net/http"
 	"os"
 	"os/signal"
 	"time"
-	"fmt"
 )
 
 func init() {
@@ -25,7 +25,7 @@ func main() {
 		server.MaxConcurrentConnections(4),
 		server.MaxNumber(256), // Config.MaxNumber
 		server.UseNumberHandler(true),
-		server.FormatNumber(func(x int) (string, error) { return fmt.Sprintf("%x", x), nil }),  // anonymous fcn
+		server.FormatNumber(func(x int) (string, error) { return fmt.Sprintf("%x", x), nil }), // anonymous fcn
 		//server.FormatNumber(func(x int) (string, error) { return fmt.Sprintf("%b", x), nil }),  // anonymous fcn
 		//server.FormatNumber(func(x int) (string, error) { return "", errors.New("FormatNumber error") }),  // anonymous fcn
 	)
@@ -34,20 +34,20 @@ func main() {
 		os.Exit(1)
 	}
 	srv := &http.Server{
-		Addr:    ":"+ Config.Port,
+		Addr:    ":" + Config.Port,
 		Handler: newServer,
 	}
 
 	go func() {
 		<-quit
-		ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(2 * time.Second))
+		ctx, cancel := context.WithDeadline(context.Background(), time.Now().Add(2*time.Second))
 		defer cancel()
 		Info.Println("shutting down server...")
-		if err := srv.Shutdown( ctx ); err != nil {
+		if err := srv.Shutdown(ctx); err != nil {
 			Error.Printf("unable to shutdown server: %v", err)
 		}
 	}()
-	Error.Println("server started at localhost:"+ Config.Port)
+	Error.Println("server started at localhost:" + Config.Port)
 	err = srv.ListenAndServe()
 	if err != nil && err != http.ErrServerClosed {
 		Error.Printf("ListenAndServe error: %v", err)

@@ -1,10 +1,9 @@
 package main
 
 import (
-	a "packagea"
+	a "02_dependency-with-import/packagea"
 )
 
 func main() {
 	a.Atask()
 }
-

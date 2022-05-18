@@ -11,8 +11,8 @@ import (
 	"os"
 	"os/signal"
 	"time"
-	"easy_metrics"
-	dec "decorator"
+	"02_decorator/easy_metrics"
+	dec "02_decorator/decorator"
 )
 
 const  (

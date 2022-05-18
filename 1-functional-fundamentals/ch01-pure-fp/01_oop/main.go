@@ -1,8 +1,8 @@
 package main
 
 import (
+	"01_oop/oop"
 	"fmt"
-	"oop"
 )
 
 func main() {

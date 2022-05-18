@@ -2,7 +2,7 @@ package main
 
 import (
     "fmt"
-    "maybe"
+    "02_maybe/maybe"
 )
 
 type Work struct { Succeeded bool }

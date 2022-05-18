@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "functor"
+	. "09_clock_functor/functor"
 	"fmt"
 )
 

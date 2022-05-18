@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "compose"
+	. "06_compose/compose"
 )
 
 func main() {

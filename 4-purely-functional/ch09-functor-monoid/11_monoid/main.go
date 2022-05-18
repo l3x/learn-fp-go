@@ -1,7 +1,7 @@
 package main
 
 import (
-	"monoid"
+	"11_monoid/monoid"
 	"fmt"
 )
 

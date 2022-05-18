@@ -1,8 +1,8 @@
 package main
 
 import (
-	"workflow"
-	. "utils"
+	. "01_car_steps/utils"
+	"01_car_steps/workflow"
 	"bufio"
 	"os"
 )
@@ -16,25 +16,24 @@ func init() {
 func main() {
 	carCntr := 0
 	if file, err := os.Open(Config.DataFilepath); err == nil {
-	    defer file.Close()
+		defer file.Close()
 		Info.Println("----")
-	    scanner := bufio.NewScanner(file)
-	    for scanner.Scan() {
-	        carCntr += 1
+		scanner := bufio.NewScanner(file)
+		for scanner.Scan() {
+			carCntr += 1
 			Info.Println("Processing car #", carCntr)
-	        line :=  scanner.Text()
-	        Info.Println("IN :", line)
-	        err, carJson := workflow.ProcessCar(line)
-	        if err == nil {
+			line := scanner.Text()
+			Info.Println("IN :", line)
+			err, carJson := workflow.ProcessCar(line)
+			if err == nil {
 				Info.Println("OUT:", carJson)
 			}
 			Info.Println("----")
-	    }
-	    if err = scanner.Err(); err != nil {
+		}
+		if err = scanner.Err(); err != nil {
 			Error.Error(err)
-	    }
+		}
 	} else {
 		Error.Error(err)
 	}
 }
-

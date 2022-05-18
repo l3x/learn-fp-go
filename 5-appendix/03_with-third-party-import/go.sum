@@ -1,0 +1,15 @@
+github.com/go-goodies/go_utils v0.0.0-20150622234138-8080b1735a88 h1:5qQuBTdiv/UA3rxhsjzVYehlFUCp6ODhujqQ+u+0Byo=
+github.com/go-goodies/go_utils v0.0.0-20150622234138-8080b1735a88/go.mod h1:iy2EooSaoOajMrw5Ynl8JOTVPPpvy51tVxzNbiuEQf0=
+github.com/kr/pretty v0.2.1 h1:Fmg33tUaq4/8ym9TJN1x7sLJnHVwhP33CNkpYV/7rwI=
+github.com/kr/pretty v0.2.1/go.mod h1:ipq/a2n7PKx3OHsz4KJII5eveXtPO4qwEXGdVfWzfnI=
+github.com/kr/pty v1.1.1/go.mod h1:pFQYn66WHrOpPYNljwOMqo10TkYh1fy3cYio2l3bCsQ=
+github.com/kr/text v0.1.0 h1:45sCR5RtlFHMR4UwH9sdQ5TC8v0qDQCHnXt+kaKSTVE=
+github.com/kr/text v0.1.0/go.mod h1:4Jbv+DJW3UT/LiOwJeYQe1efqtUx/iVham/4vfdArNI=
+github.com/margnus1/go-deepcopy v0.0.0-20140624231552-e90e9caf2f24 h1:xLD2c01e4ZJD9QoUINYfN2QRlBsKuxduzKtpk8oVjo0=
+github.com/margnus1/go-deepcopy v0.0.0-20140624231552-e90e9caf2f24/go.mod h1:htqcqoNQp32xb0kCqp6zLqMIqg66TiAtr52L2ydpER4=
+github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d h1:VhgPp6v9qf9Agr/56bj7Y/xa04UccTW04VP0Qed4vnQ=
+github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d/go.mod h1:YUTz3bUH2ZwIWBy3CJBeOBEugqcmXREj14T+iG/4k4U=
+github.com/remogatto/prettytest v0.0.0-20200211072524-6d385e11dcb8 h1:nRDwTcxV9B3elxMt+1xINX0bwaPdpouqp5fbynexY8U=
+github.com/remogatto/prettytest v0.0.0-20200211072524-6d385e11dcb8/go.mod h1:jOEnp79oIHy5cvQSHeLcgVJk1GHOOHJHQWps/d1N5Yo=
+gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c h1:Hei/4ADfdWqJk1ZMxUNpqntNwaWcugrBjAiHlqqRiVk=
+gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c/go.mod h1:JHkPIbrfpd72SG/EVd6muEfDQjcINNoR0C8j2r3qZ4Q=

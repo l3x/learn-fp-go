@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "hof"
+	. "03_hof/hof"
 	"log"
 	"os"
 	"github.com/julienschmidt/httprouter"
