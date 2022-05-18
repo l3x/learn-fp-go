@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "car"
+	. "03_car/car"
 	"fmt"
 )
 

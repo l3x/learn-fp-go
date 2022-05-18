@@ -1,10 +1,9 @@
 package main
 
 import (
-	a "packagea"
+	a "03_with-third-party-import/packagea"
 )
 
 func main() {
 	a.Atask()
 }
-

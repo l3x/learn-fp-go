@@ -1,17 +1,19 @@
 package main
 
 import (
-	. "utils"
-	. "interfaces"
-	"os"
+	"04_onion/infrastructure"
+	. "04_onion/interfaces"
+	. "04_onion/utils"
 	"io/ioutil"
-	"infrastructure"
-	"github.com/pkg/errors"
 	"net/http"
+	"os"
+
+	"github.com/pkg/errors"
 )
 
 const defaultFileName = "eventset1.jsonl"
-var	fileName	string
+
+var fileName string
 var wsh WebserviceHandler
 
 func init() {
@@ -35,7 +37,7 @@ func init() {
 
 type endpoint struct {
 	Api
-	uriExample	 string
+	uriExample string
 }
 
 func printApiExample(url, uriExample string) {
@@ -58,12 +60,12 @@ func main() {
 
 	var endpoints = []endpoint{
 		{Api{wsh.Health, "/health"}, ""},
-		{Api{wsh.ListSourceBuckets, "/list-source-buckets"}, "projectId="+ Config.GcpSourceProjectId},
-		{Api{wsh.ListSinkBuckets, "/list-sink-buckets"}, "projectId="+ Config.GcpSinkProjectId},
-		{Api{wsh.SourceFileExists, "/source-file-exists"}, "fileName="+fileName},
-		{Api{wsh.DownloadFile, "/download-file"}, "fileName="+fileName},
-		{Api{wsh.UploadFile, "/upload-file"}, "fileName="+fileName},
-		{Api{wsh.LocalFileExists, "/local-file-exists"}, "fileName="+fileName},
+		{Api{wsh.ListSourceBuckets, "/list-source-buckets"}, "projectId=" + Config.GcpSourceProjectId},
+		{Api{wsh.ListSinkBuckets, "/list-sink-buckets"}, "projectId=" + Config.GcpSinkProjectId},
+		{Api{wsh.SourceFileExists, "/source-file-exists"}, "fileName=" + fileName},
+		{Api{wsh.DownloadFile, "/download-file"}, "fileName=" + fileName},
+		{Api{wsh.UploadFile, "/upload-file"}, "fileName=" + fileName},
+		{Api{wsh.LocalFileExists, "/local-file-exists"}, "fileName=" + fileName},
 	}
 	Info.Println("Example API endpoints:")
 	{

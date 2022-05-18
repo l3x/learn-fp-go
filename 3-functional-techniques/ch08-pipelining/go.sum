@@ -1,0 +1,8 @@
+github.com/go-goodies/go_currency v0.0.0-20140912185802-bf5e29957fc4 h1:P5rBQJX1qYsOQAUNmfxZgdQ95PmNN84oPZGV+qyt5TY=
+github.com/go-goodies/go_currency v0.0.0-20140912185802-bf5e29957fc4/go.mod h1:tYX6HE9PE4A+3Pdu4WkjizG48TfbgNo3dQxfpStU7EE=
+github.com/go-goodies/go_utils v0.0.0-20150622234138-8080b1735a88 h1:5qQuBTdiv/UA3rxhsjzVYehlFUCp6ODhujqQ+u+0Byo=
+github.com/go-goodies/go_utils v0.0.0-20150622234138-8080b1735a88/go.mod h1:iy2EooSaoOajMrw5Ynl8JOTVPPpvy51tVxzNbiuEQf0=
+github.com/margnus1/go-deepcopy v0.0.0-20140624231552-e90e9caf2f24 h1:xLD2c01e4ZJD9QoUINYfN2QRlBsKuxduzKtpk8oVjo0=
+github.com/margnus1/go-deepcopy v0.0.0-20140624231552-e90e9caf2f24/go.mod h1:htqcqoNQp32xb0kCqp6zLqMIqg66TiAtr52L2ydpER4=
+github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d h1:VhgPp6v9qf9Agr/56bj7Y/xa04UccTW04VP0Qed4vnQ=
+github.com/nu7hatch/gouuid v0.0.0-20131221200532-179d4d0c4d8d/go.mod h1:YUTz3bUH2ZwIWBy3CJBeOBEugqcmXREj14T+iG/4k4U=

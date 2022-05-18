@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "functor"
+	. "05_int_functor/functor"
 )
 
 func main() {

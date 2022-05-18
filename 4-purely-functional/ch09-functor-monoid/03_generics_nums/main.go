@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "num"
+	. "03_generics_num/num"
 )
 
 func main() {

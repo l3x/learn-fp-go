@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "car"
+	. "03_generics_car/car"
 )
 
 func main() {

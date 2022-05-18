@@ -2,9 +2,9 @@ package main
 
 import (
 	"log"
-	"functor"
-)
 
+	"01_clock_functor/functor"
+)
 
 func main() {
 
@@ -26,4 +26,3 @@ func main() {
 
 	log.Printf("chain applications: %s", functor.Wrap([]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12}).Map(amPmMapper))
 }
-

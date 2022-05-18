@@ -1,7 +1,7 @@
 package main
 
 import (
-    "fibonacci"
+    "02_fib/fibonacci"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package main
 
 import (
-	a "packagea"
+	a "01_dependency-rule-good/packagea"
 )
 
 func main() {

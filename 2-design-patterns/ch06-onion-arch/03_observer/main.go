@@ -1,7 +1,7 @@
 package main
 
 import (
-	. "observer"
+	. "03_observer/observer"
 )
 
 func main() {
